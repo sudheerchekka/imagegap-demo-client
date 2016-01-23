@@ -1,0 +1,13 @@
+package com.redhat.demos.imagegapanalysis;
+
+import java.lang.Number;
+
+rule "ResetValidation"
+	dialect "mvel"
+	ruleflow-group "resetValidation"
+	when
+		error : ValidationError( )
+	then
+		retract( error );
+		System.out.println("Executed Rule: " + drools.getRule().getName() );
+end
