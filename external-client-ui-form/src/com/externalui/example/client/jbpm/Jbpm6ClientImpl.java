@@ -41,19 +41,22 @@ public class Jbpm6ClientImpl implements Jbpm6Client{
   }
 	
 	
-	/*public String startProcess(String deploymentId, String processId, String mapOfParams) throws HttpException{
+	public String startProcess(String deploymentId, String processId, String mapOfParams) throws HttpException{
 		return startProcessWithMap(deploymentId, processId, queryStringToMap(mapOfParams));
-	}*/
-
-	public String startProcess(String deploymentId, String processId, Map<String, String> mapOfParams) throws HttpException{
-		return startProcessWithMap(deploymentId, processId, mapOfParams);
 	}
 
-	
-	protected String startProcessWithMap(String deploymentId, String processId, Map<String,String> params) throws HttpException{
+	protected String startProcessWithMap(String deploymentId, String processId, Map<String, Object> params) throws HttpException{
+		//return startProcessWithMap(deploymentId, processId, params);
+		
 		Preconditions.checkArgument(deploymentId.split(":").length==3);
 		return send(POST, "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+mapToQueryString(params));
 	}
+
+	
+	/*protected String startProcessWithMap(String deploymentId, String processId, Map<String,String> params) throws HttpException{
+		Preconditions.checkArgument(deploymentId.split(":").length==3);
+		return send(POST, "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+mapToQueryString(params));
+	}*/
 	
 	/*protected String startProcessWithMap(String deploymentId, String processId, Map<String,Object> params) throws HttpException{
 		Preconditions.checkArgument(deploymentId.split(":").length==3);
@@ -73,7 +76,7 @@ public class Jbpm6ClientImpl implements Jbpm6Client{
 		return completeTaskWithMap(id, queryStringToMap(commaSeparatedListOfParams));
 	}
 	
-	public String completeTaskWithMap(String id, Map<String, String> params) throws HttpException{
+	public String completeTaskWithMap(String id, Map<String, Object> params) throws HttpException{
 		return send(POST, "rest/task/"+id+"/complete"+mapToQueryString(params));
 	}
 	
@@ -126,16 +129,16 @@ public class Jbpm6ClientImpl implements Jbpm6Client{
 		return sb.toString();
 	}*/
 	
-	private String mapToQueryString(Map<String,String> params){
+	private String mapToQueryString(Map<String,Object> params){
 		StringBuffer sb=new StringBuffer();
-		for(Map.Entry<String, String> e:params.entrySet()){
+		for(Map.Entry<String, Object> e:params.entrySet()){
 			sb.append("&map_"+e.getKey()+"="+e.getValue());
       
-			/*if (Integer.class.isAssignableFrom(e.getValue().getClass()))
+			if (Integer.class.isAssignableFrom(e.getValue().getClass()))
         		sb.append("i"); // force the Integer data type once its been received by Jbpm server
       		if (Long.class.isAssignableFrom(e.getValue().getClass()))
         		sb.append("l"); // force the Long data type once its been received by Jbpm server
-        	*/
+        	
 		}
 		
 		if (sb.length()>0)sb.replace(0,1,"?");
@@ -143,8 +146,8 @@ public class Jbpm6ClientImpl implements Jbpm6Client{
 		return sb.toString();
 	}
 
-	public static Map<String, String> queryStringToMap(String queryString) {
-	    Map<String, String> result = Maps.newLinkedHashMap();
+	public static Map<String, Object> queryStringToMap(String queryString) {
+	    Map<String, Object> result = Maps.newLinkedHashMap();
 	    String[] pairs = queryString.split(",");
 	    for (String pair : pairs) {
 	    	String[] keyValue=pair.split("=");

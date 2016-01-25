@@ -87,7 +87,7 @@ th {background: lightskyblue}
 	<div id="header">
 		
 		<img src="http://www.techgig.com/files/photo_1426577193_quiz_image_temp.jpg" width="100px" height="70px" align="left" />
-		<h1>Poster database</h1>
+		<h1>Movie and Episode Image Inbound</h1>
 		
 	</div>
 	

@@ -41,7 +41,11 @@ public class SimpleServlet extends HttpServlet {
 		
 		hm.put("movieEpisodeName", request.getParameter("movieEpisodeName"));
 		hm.put("airDate", request.getParameter("airDate"));
-		hm.put("releaseYear", request.getParameter("releaseYear"));
+		String releaseYear = request.getParameter("releaseYear");
+		if (releaseYear.equals(""))
+			hm.put("releaseYear", releaseYear);
+		else
+			hm.put("releaseYear", releaseYear + "i"); // special case where the integer value should be submitted by appending "i" in the end to avoid java.lang.ClassCastException
 		hm.put("country", request.getParameter("country"));
 		
 		System.out.println("=====> Before sending request: HashMap values are: \n" + hm);

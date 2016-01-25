@@ -99,17 +99,22 @@ public class BpmsClientThread {
         
         	
         	System.out.println("Starting demos:ImageGapAnalysis !!...");
-        	Map<String, String> params = new HashMap();
+        	/*Map<String, String> params = new HashMap();
         	params.put("movieEpisodeName", movieEpisodeName);
         	if (releaseYear != null || !releaseYear.equals(""))
-        		params.put("releaseYear", "'" + releaseYear + "'");
+        		//params.put("releaseYear", "'" + releaseYear + "'");
+        		params.put("releaseYear2", releaseYear);
         	
         	if (airDate != null || !airDate.equals(""))
         		params.put("airDate", airDate);
-        	params.put("country", country);
+        	params.put("country", country);*/
         	
         	response = client.startProcess("com.redhat.demos:ImageGapAnalysis:1.0",
-        			"MortgageApplication.ImageGapProcess", params);
+        			"MortgageApplication.ImageGapProcess", 
+        			"movieEpisodeName=" + movieEpisodeName +
+        			",releaseYear2=" + releaseYear +
+        			",airDate=" + airDate +
+        			",country=" + country);
 
             System.out.println("Process started 1: " + response);
 
