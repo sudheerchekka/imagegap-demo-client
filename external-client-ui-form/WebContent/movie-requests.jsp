@@ -100,7 +100,7 @@ th {background: lightskyblue}
     />
      
     <sql:query var="listMovieRequests"   dataSource="${myDS}">
-        SELECT MR.id, MR.name, MR.airDate, MR.releaseYear, MR.country, MP.posterUrl, MP.posterId  FROM bpms62.MOVIE_EPISODE_REQUEST MR, bpms62.MOVIE_EPISODE_POSTER MP where MR.posterId = MP.posterId order by MR.id desc;
+        SELECT MR.id, MR.name, MR.type, MR.airDate, MR.releaseYear, MR.country, MP.posterUrl, MP.posterId  FROM bpms62.MOVIE_EPISODE_REQUEST MR, bpms62.MOVIE_EPISODE_POSTER MP where MR.posterId = MP.posterId order by MR.id desc;
     </sql:query>
      
      <div id="section">
@@ -110,6 +110,7 @@ th {background: lightskyblue}
             <tr background="blue">
                 <th>ID</th>
                 <th>Name</th>
+                <th>Movie Type</th>
                 <th>Air Date</th>
                 <th>Release Year</th>
                 <th>Country</th>
@@ -120,6 +121,7 @@ th {background: lightskyblue}
                 <tr class="${loop.index % 2 == 0 ? 'even' : 'odd'}">
                     <td><c:out value="${user.id}" /></td>
                     <td><c:out value="${user.name}" /></td>
+                    <td><c:out value="${user.type}" /></td>
                     <td><c:out value="${user.airDate}" /></td>
                     <td><c:out value="${user.releaseYear}" /></td>
                     <td><c:out value="${user.country}" /></td>

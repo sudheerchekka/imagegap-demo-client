@@ -112,7 +112,7 @@ public class BpmsClientThread {
         	response = client.startProcess("com.redhat.demos:ImageGapAnalysis:1.0",
         			"MortgageApplication.ImageGapProcess", 
         			"movieEpisodeName=" + movieEpisodeName +
-        			",releaseYear2=" + releaseYear +
+        			",releaseYear=" + releaseYear +
         			",airDate=" + airDate +
         			",country=" + country);
 
