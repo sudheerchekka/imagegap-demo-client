@@ -87,7 +87,7 @@ th {background: lightskyblue}
 	<div id="header">
 		
 		<img src="http://www.techgig.com/files/photo_1426577193_quiz_image_temp.jpg" width="100px" height="70px" align="left" />
-		<h1>Movie and Episode Image Inbound</h1>
+		<h1>Movie and Episode Image Inbound - Posters</h1>
 		
 	</div>
 	
@@ -106,7 +106,6 @@ th {background: lightskyblue}
      <div id="section">
     <div align="center">
         <table border="1" cellpadding="5" >
-            <caption><h2>List of Posters</h2></caption>
             <tr background="blue">
                 <th>Poster Id</th>
                 <th>Poster URL</th>

@@ -87,7 +87,7 @@ th {background: lightskyblue}
 	<div id="header">
 		
 		<img src="http://www.techgig.com/files/photo_1426577193_quiz_image_temp.jpg" width="100px" height="70px" align="left" />
-		<h1>Movie and Episode Image Inbound</h1>
+		<h1>Movie and Episode Image Inbound - Requests</h1>
 		
 	</div>
 	
@@ -103,10 +103,10 @@ th {background: lightskyblue}
         SELECT MR.id, MR.name, MR.type, MR.airDate, MR.releaseYear, MR.country, MP.posterUrl, MP.posterId  FROM bpms62.MOVIE_EPISODE_REQUEST MR, bpms62.MOVIE_EPISODE_POSTER MP where MR.posterId = MP.posterId order by MR.id desc;
     </sql:query>
      
+     <br><br><br>
      <div id="section">
     <div align="center">
         <table border="1" cellpadding="5" >
-            <caption><h2>List of Episode and Movie Requests</h2></caption>
             <tr background="blue">
                 <th>ID</th>
                 <th>Name</th>
