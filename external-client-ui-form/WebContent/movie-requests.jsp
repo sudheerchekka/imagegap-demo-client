@@ -110,7 +110,7 @@ th {background: lightskyblue}
             <tr background="blue">
                 <th>ID</th>
                 <th>Name</th>
-                <th>Movie Type</th>
+                <th>Movie Era</th>
                 <th>Air Date</th>
                 <th>Release Year</th>
                 <th>Country</th>
