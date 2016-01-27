@@ -74,32 +74,32 @@ public class CreateProcesses
 	    	params.put("releaseYear", "'1977'");
 	    	params.put("country", "'USA'");*/
 	    	
-	    	paramsString = "?map_airDate='2008'&map_movieEpisodeName=Skyfall&map_country='USA'&map_releaseYear='1977'";
+	    	paramsString = "?map_airDate='2008'&map_movieEpisodeName=Skyfall&map_country='USA'&map_releaseYear=1962i";
 	    	url = "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+paramsString;
 	    	System.out.println("url: " + url);
 	    	send("POST", url);
 	    	
-	    	paramsString = "?map_airDate='2009'&map_movieEpisodeName=Pi&map_country='USA'&map_releaseYear='1977'";
+	    	paramsString = "?map_airDate='2009'&map_movieEpisodeName=Pi&map_country='USA'&map_releaseYear=1977i";
 	    	url = "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+paramsString;
 	    	System.out.println("url: " + url);
 	    	send("POST", url);
 	    	
-	    	paramsString = "?map_airDate='2010'&map_movieEpisodeName=emiti&map_country='USA'&map_releaseYear='1977'";
+	    	paramsString = "?map_airDate='2010'&map_movieEpisodeName=emiti&map_country='USA'&map_releaseYear=1983i";
 	    	url = "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+paramsString;
 	    	System.out.println("url: " + url);
 	    	send("POST", url);
 	    	
-	    	paramsString = "?map_airDate='2012'&map_movieEpisodeName=vunda&map_country='USA'&map_releaseYear='1977'";
+	    	paramsString = "?map_airDate='2012'&map_movieEpisodeName=vunda&map_country='USA'&map_releaseYear=1990i";
 	    	url = "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+paramsString;
 	    	System.out.println("url: " + url);
 	    	send("POST", url);
 	    	
-	    	paramsString = "?map_airDate='2015'&map_movieEpisodeName=lincoln&map_country='USA'&map_releaseYear='1977'";
+	    	paramsString = "?map_airDate='2015'&map_movieEpisodeName=lincoln&map_country='USA'&map_releaseYear=2012i";
 	    	url = "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+paramsString;
 	    	System.out.println("url: " + url);
 	    	send("POST", url);
 	    	
-	    	paramsString = "?map_airDate='2015'&map_movieEpisodeName=&map_country='USA'&map_releaseYear='1977'";
+	    	paramsString = "?map_airDate='2015'&map_movieEpisodeName=&map_country='USA'&map_releaseYear=1940i";
 	    	url = "rest/runtime/"+deploymentId+"/process/"+processId+"/start"+paramsString;
 	    	System.out.println("url: " + url);
 	    	send("POST", url);

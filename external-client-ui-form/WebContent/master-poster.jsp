@@ -103,6 +103,7 @@ th {background: lightskyblue}
         SELECT posterId, posterTags, posterUrl FROM bpms62.MOVIE_EPISODE_POSTER;
     </sql:query>
      
+     <br><br><br>
      <div id="section">
     <div align="center">
         <table border="1" cellpadding="5" >

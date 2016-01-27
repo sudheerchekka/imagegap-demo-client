@@ -17,3 +17,10 @@ Then deploy the .jar to the following location:
 
 $JBOSS_BPMS_SERVER_HOME/standalone/deployments/
 
+
+MySQL database
+--------------
+credentials:
+
+root@localhost: rootmysql
+
