@@ -11,3 +11,9 @@ Artifacts required for the demo:
 * imagegap-simulation: simulate multiple process instances at various stages
 * image-gap-bpm-repo: BPM project
 * bpms-imagegap-workitemhandlers: workitem handler java code
+*
+
+URLs:
+* External web application url: http://localhost:8080/external-client-ui-form-1.0
+* List of posters in DB: http://localhost:8080/external-client-ui-form-1.0/master-poster.jsp
+* List of movie requests in DB: http://localhost:8080/external-client-ui-form-1.0/movie-requests.jsp
