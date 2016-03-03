@@ -10,3 +10,4 @@ Artifacts required for the demo:
 * external-client-ui-form: web application that calls BPMS process
 * imagegap-simulation: simulate multiple process instances at various stages
 * image-gap-bpm-repo: BPM project
+* bpms-imagegap-workitemhandlers: workitem handler java code
