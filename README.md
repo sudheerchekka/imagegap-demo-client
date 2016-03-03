@@ -5,3 +5,8 @@
 3. BPMS - bpmAdmin/bpmsuite1!
 4. Install MySQL
 5. MySQL - root@localhost: rootmysql
+
+Artifacts required for the demo:
+* external-client-ui-form: web application that calls BPMS process
+* imagegap-simulation: simulate multiple process instances at various stages
+* image-gap-bpm-repo: BPM project
